@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="form.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -12,50 +13,89 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 <body >
-<div >
-  <div class="d-flex justify-content-center" style="background-color: #d3d1d1" >
-    <div class = "col-sm-5 round" style="background-color: #e9e9e9">
-      <h1 style="text-align:center;" >Registration Form</h1>
-      <form  id='customerForm' style="width:95%">
+
+    <div class="fixed-top d-flex justify-content-center" style="background-color: white">
+        <h1 style="text-align:center;" >Registration Form</h1>
+    </div>
+    <div  style="background-color: #e9e9e9; margin-top:55px; padding-top:25px; margin-bottom:40px;padding-bottom:25px">
+       
+      <div class="container" >
+      
+      <form  id='customerForm' class="form-style">
+         
         <div class="form-group" >
           <label>Name</label>
           <input type="text" class="form-control post_data" name="name"  placeholder="student name">
         </div>
         <div class="form-group">
-          <label>Gender</label>
-          <input type="radio" name="gender" value="male" checked> Male<br>
+        <label>Gender</label>
+          <!-- <input type="radio" name="gender" value="male" checked> Male<br>
           <input type="radio" name="gender" value="female"> Female<br>
-          <input type="radio" name="gender" value="other"> Other<br>
+          <input type="radio" name="gender" value="other"> Other<br>  -->
+          <div style=" text-align:center; border-radius:10px">
+          <label style="width:19.5%">
+              <input type="radio" name="test" value="male" checked>
+              <!-- <img src="images/male.png" style="width:40%" > -->
+              <div class="card " style="border:none">
+                 
+                  <img class="card-img-top" src="images/male.png" alt="Card image" style="width:100%">
+                  <div class="card-body" style="padding:0px">
+                    <p class="card-title">Male</p>               
+                  </div>
+                </div>
+            </label>
+            
+            <label style="width:17%">
+              <!-- <img src="images/female.jpeg" style="width:37%"> -->
+              <input type="radio" name="test" value="female">              
+              
+              <div class="card" style="border:none">
+                  <img class="card-img-top" src="images/female.jpeg" alt="Card image" style="width:100%">
+                  <div class="card-body" style="padding:0px">
+                    <p class="card-title">Female</p>               
+                  </div>
+                </div>
+            </label>
+          </div>
         </div>
         <div class="form-group">
           <label>Email:</label>
-          <input type="email" class="form-control" name="email">
+          <input type="email" class="form-control" name="email" placeholder="Enter Email">
         </div>
         <div class="form-group">
             <label> Confirm Email:</label>
-            <input type="email" class="form-control" name="email2" >
+            <input type="email" class="form-control" name="email2" placeholder="Confirm Email" >
         </div>
         <div class="form-group">
               <label>Contact no:</label>
-              <input type="tel" class="form-control" name="phone_no">
+              <input type="tel" class="form-control" name="phone_no" placeholder="Enter Contact">
         </div>
         <div class="form-group">
                 <label>Confirm Contact no:</label>
-                <input type="tel" class="form-control" name="phone_no 2">
+                <input type="tel" class="form-control" name="phone_no 2" placeholder="Confirm contact">
               </div>
         <div class="form-group">
             <label>Adhar no:</label>
-            <input type="text" class="form-control post_data" name="adhar">
+            <input type="text" class="form-control post_data" name="adhar" placeholder="0000 0000 0000">
         </div>
         <div class="form-group">
             <label>School phone no:</label>
-            <input type="tel" class="form-control post_data" name="school phone">
-        </div>
-          <button class="btn btn-primary">Submit</button>
+            <input type="tel" class="form-control post_data" name="school phone"  placeholder="Enter School Phone">
+        </div> 
+       
       </form>
+      
     </div>
-	</div>
-</div>
+     
+    </div>
+   
+    <footer class="fixed-bottom"  style="background: white;">
+        <button class="btn">Cancel</button>
+        <button class="btn" style="float:right;">Next
+          <i class="fa fa-angle-right"></i>
+        </button>
+      </footer>
+
 </body>
 <script src="form.js"></script>
 </html>
