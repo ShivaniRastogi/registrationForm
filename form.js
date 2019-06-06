@@ -1,27 +1,14 @@
-
-// function myFunction(){
-//     var formData = JSON.stringify($("#myForm").serializeArray());
-//     console.log(formData);
-//     $.ajax({
-//         type: "POST",
-//         url: "http://127.0.0.1:9000/test",
-//         data: formData,
-//         success: function(){},
-//         dataType: "json",
-//         contentType : "application/json"
-//       });
-
-// }
+$(document).ready(function()
+{
+  $(".round").css("border-radius", "2%");
+});
 $(document).ready(function(){
-  var contextroot = "/services/"
   $("#customerForm").submit(function(e){
       e.preventDefault();
       var form = $(this);
-      var action = form.attr("action");
       var data = form.serializeArray();
-
       $.ajax({
-                  url: contextroot+action,
+                  url: "http://127.0.0.1:9000/test",
                   dataType: 'json',
                   type: 'POST',
                   contentType: 'application/json',
@@ -35,7 +22,6 @@ $(document).ready(function(){
       });
 });
 });
-
 //utility function
 function getFormData(data) {
  var unindexed_array = data;
